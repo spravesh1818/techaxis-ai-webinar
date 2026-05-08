@@ -77,6 +77,29 @@ html, body {
 
 .layout-hero h1 { max-width: 22ch; }
 
+.qr-follow-slide .slide-head {
+  justify-items: center;
+  text-align: center;
+}
+
+.qr-follow-slide .slide-body {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0;
+}
+
+.qr-follow-image {
+  width: min(80vw, 66vh);
+  height: auto;
+  max-height: calc(100dvh - 255px);
+  max-width: 720px;
+  border-radius: 14px;
+  border: 1px solid var(--line-1);
+  object-fit: contain;
+}
+
 .hero-meta {
   display: flex;
   flex-wrap: wrap;
