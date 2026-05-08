@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Workshop Slides</title>
+  <meta name="description"
+    content="Workshop slide decks by Pravesh Chapagain: Prompt Engineering Fundamentals and Introduction to Generative AI.">
+  <link rel="stylesheet" href="./slides/styles/theme.css">
+  <style>
+    body {
+      min-height: 100vh;
+    }
+
+    .home {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+      padding: clamp(2.5rem, 6vh, 4.5rem) 0;
+    }
+
+    .hero {
+      margin-bottom: 2rem;
+    }
+
+    .gradient-text {
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .deck-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .deck-card h2 {
+      margin-bottom: 0.35rem;
+    }
+
+    .deck-meta {
+      display: flex;
+      gap: 0.45rem;
+      flex-wrap: wrap;
+      margin-top: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .deck-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(124, 156, 255, 0.45);
+    }
+
+    .deck-link:hover {
+      border-bottom-color: var(--accent-2);
+    }
+
+    .footer-note {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="home" aria-label="Workshop homepage">
+    <section class="hero">
+      <span class="kicker">Workshop decks</span>
+      <h1>Welcome to my <span class="gradient-text">AI slide library</span></h1>
+      <p class="lead">Choose a deck to begin. Both slides follow the same visual theme and presentation flow for live
+        workshops.</p>
+    </section>
+
+    <section class="deck-grid" aria-label="Slide deck links">
+      <article class="glass-card deck-card">
+        <span class="kicker">Deck 1</span>
+        <h2>Prompt Engineering Fundamentals</h2>
+        <p class="muted">A 150-minute hands-on workshop on prompt patterns, advanced techniques, and reusable templates.</p>
+        <div class="deck-meta">
+          <span class="tag accent">150 minutes</span>
+          <span class="tag">Hands-on</span>
+          <span class="tag success">Templates</span>
+        </div>
+        <a class="deck-link" href="./slides/prompt-engineering-fundamentals.html">Open slides -></a>
+      </article>
+
+      <article class="glass-card deck-card">
+        <span class="kicker">Deck 2</span>
+        <h2>Introduction to Generative AI</h2>
+        <p class="muted">A 120-minute workshop on GenAI foundations, real-world adoption, and future-of-work insights.</p>
+        <div class="deck-meta">
+          <span class="tag accent">120 minutes</span>
+          <span class="tag">Data-backed</span>
+          <span class="tag warn">Level-up plan</span>
+        </div>
+        <a class="deck-link" href="./slides/genai.html">Open slides -></a>
+      </article>
+    </section>
+
+    <p class="muted-2 footer-note">Built for GitHub Pages deployment.</p>
+  </main>
+</body>
+
+</html>

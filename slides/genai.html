@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to Generative AI - Workshop Deck</title>
+  <meta name="description"
+    content="A 120-minute, mixed-audience workshop on what generative AI is, where it has penetrated, what it means for the future of work, and how to level up - with in-deck data visualisations and cited sources.">
+  <link rel="stylesheet" href="./styles/theme.css">
+  <link rel="stylesheet" href="./styles/deck.css">
+  <link rel="stylesheet" media="print" href="./styles/print.css">
+</head>
+
+<body>
+  <main class="deck" id="deck" aria-live="polite">
+
+    <!-- 1. COVER -->
+    <section class="slide is-active layout-hero" data-title="Cover" data-duration="2">
+      <div class="slide-head">
+        <span class="kicker">Workshop - 120 minutes</span>
+        <h1>Introduction to <span class="gradient-text">Generative AI</span></h1>
+        <p class="lead">What it is, where it lives, what it means for the future of work, and how you can level up -
+          with the data and the playbook.</p>
+      </div>
+      <div class="slide-body">
+        <div class="hero-meta">
+          <span class="tag accent">Mixed audience</span>
+          <span class="tag">Hands-on</span>
+          <span class="tag success">In-deck data &amp; charts</span>
+          <span class="tag warn">Level-up plan</span>
+        </div>
+        <div class="hero-cta">
+          <span class="tag muted-2">Press &rarr; or Space to begin</span>
+        </div>
+        <aside class="notes">
+          Welcome the room. Confirm projector is sharp. Promise we will look at real data on every chart slide and cite
+          the source out loud.
+        </aside>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 2. PRESENTER INTRO -->
+    <section class="slide" data-title="Hello, I am" data-duration="3">
+      <div class="slide-head">
+        <span class="kicker">Hello there</span>
+        <h2>About your facilitator</h2>
+      </div>
+      <div class="slide-body">
+        <div class="profile-card glass-card">
+          <div class="profile-avatar">
+            <img src="assets/my_photo.jpg" alt="Photo of Amy Chapagain">
+          </div>
+          <div>
+            <h2 class="gradient-text">Pravesh Chapagain</h2>
+            <p class="profile-role">Software Engineer &middot; AI/Prompt practitioner &middot; Workshop facilitator</p>
+            <p class="profile-bio">
+              I work where engineering, AI workflows, and teaching meet. Today I will give you the same map I use to
+              keep up with generative AI without getting overwhelmed.
+            </p>
+            <div class="profile-tags">
+              <span class="tag">Engineering</span>
+              <span class="tag accent">AI workflows</span>
+              <span class="tag success">Teaching</span>
+            </div>
+          </div>
+        </div>
+        <p class="muted">If you went through the prompt-engineering deck with me, today builds on that. If not - you
+          will leave with the same playbook.</p>
+        <aside class="notes">
+          Keep this short. Tell one 60-second story about how generative AI changed your day-to-day workflow.
+        </aside>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 3. BEFORE WE START: APP LANDSCAPE -->
+    <section class="slide" data-title="Before we start: AI apps" data-duration="3">
+      <div class="slide-head">
+        <span class="kicker">Before we start</span>
+        <h2>AI apps you probably see every day</h2>
+      </div>
+      <div class="slide-body">
+        <div class="domain-grid icon-app-grid">
+          <div class="domain icon-app-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT icon">
+            <h3>ChatGPT</h3>
+          </div>
+          <div class="domain icon-app-item">
+            <img src="https://cdn.simpleicons.org/googlegemini/8E75B2" alt="Gemini icon">
+            <h3>Gemini</h3>
+          </div>
+          <div class="domain icon-app-item">
+            <img src="https://cdn.simpleicons.org/claude/D97757" alt="Claude icon">
+            <h3>Claude</h3>
+          </div>
+          <div class="domain icon-app-item">
+            <img src="https://cdn.simpleicons.org/perplexity/20B8CD" alt="Perplexity icon">
+            <h3>Perplexity</h3>
+          </div>
+          <div class="domain icon-app-item">
+            <img src="https://cdn.simpleicons.org/githubcopilot/34D399" alt="GitHub Copilot icon">
+            <h3>GitHub Copilot</h3>
+          </div>
+          <div class="domain icon-app-item">
+            <img src="https://cdn.simpleicons.org/meta/0866FF" alt="Meta AI icon">
+            <h3>Meta AI</h3>
+          </div>
+        </div>
+        <p class="muted">These tools changed how people write, code, search, and build. We will unpack what powers them
+          and how to use them effectively.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 4. OBJECTIVES -->
+    <section class="slide" data-title="Objectives" data-duration="2">
+      <div class="slide-head">
+        <span class="kicker">By the end of this workshop</span>
+        <h2>You will be able to</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid two">
+          <div class="glass-card">
+            <h3>Explain generative AI clearly</h3>
+            <p class="muted">Define it, separate it from "AI in general", and describe how it produces text, image,
+              audio, video, and code.</p>
+          </div>
+          <div class="glass-card">
+            <h3>See where it has penetrated</h3>
+            <p class="muted">Identify the 8 domains it is reshaping fastest - with real adoption and investment numbers,
+              not vibes.</p>
+          </div>
+          <div class="glass-card">
+            <h3>Read the future of work</h3>
+            <p class="muted">Understand which tasks, roles, and skills are being augmented, replaced, and newly created.
+            </p>
+          </div>
+          <div class="glass-card">
+            <h3>Build a level-up plan</h3>
+            <p class="muted">Walk away with the 6 facets to develop and a 30/60/90 day plan you actually start tomorrow.
+            </p>
+          </div>
+        </div>
+        <aside class="notes">
+          Read each outcome aloud. Ask the room which outcome they need most - that is the cue for where to spend extra
+          minutes later.
+        </aside>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 4. AGENDA - 120 MIN, 7 SECTIONS -->
+    <section class="slide" data-title="Agenda" data-duration="3">
+      <div class="slide-head">
+        <span class="kicker">120 minutes &middot; story-first flow</span>
+        <h2>Today's agenda</h2>
+      </div>
+      <div class="slide-body">
+        <div class="agenda">
+          <div class="agenda-item">
+            <span class="agenda-time">00:00</span>
+            <span class="agenda-title">Frame: welcome &middot; intro &middot; objectives &middot; agenda</span>
+            <span class="agenda-duration">10 min</span>
+          </div>
+          <div class="agenda-item">
+            <span class="agenda-time">00:10</span>
+            <span class="agenda-title">Intro to generative AI - what it is, how it differs, and key modalities</span>
+            <span class="agenda-duration">22 min</span>
+          </div>
+          <div class="agenda-item">
+            <span class="agenda-time">00:32</span>
+            <span class="agenda-title">What GenAI can do today - model/tool demos, examples, and prompt exercises</span>
+            <span class="agenda-duration">22 min</span>
+          </div>
+          <div class="agenda-item">
+            <span class="agenda-time">00:54</span>
+            <span class="agenda-title">How it is built - history from translation to transformers + internal
+              workings</span>
+            <span class="agenda-duration">18 min</span>
+          </div>
+          <div class="agenda-item">
+            <span class="agenda-time">01:12</span>
+            <span class="agenda-title">Break</span>
+            <span class="agenda-duration">10 min</span>
+          </div>
+          <div class="agenda-item">
+            <span class="agenda-time">01:22</span>
+            <span class="agenda-title">Level up - the 6 facets of an AI-fluent person + Activity C</span>
+            <span class="agenda-duration">25 min</span>
+          </div>
+          <div class="agenda-item">
+            <span class="agenda-time">01:47</span>
+            <span class="agenda-title">Close: adoption curve &middot; sources &middot; tomorrow &middot; connect
+              &middot; Q&amp;A</span>
+            <span class="agenda-duration">13 min</span>
+          </div>
+        </div>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 5. DEFINITION -->
+    <section class="slide" data-title="What is generative AI?" data-duration="3">
+      <div class="slide-head">
+        <span class="kicker">Intro to GenAI</span>
+        <h2>What is generative AI?</h2>
+      </div>
+      <div class="slide-body">
+        <div class="quote-block">
+          Generative AI is a family of models that produce new artefacts - text, image, audio, video, code, even 3D - by
+          learning from very large amounts of existing data.
+          <div class="quote-author">- Working definition for this workshop</div>
+        </div>
+        <div class="grid two">
+          <div class="glass-card">
+            <h3>The shift</h3>
+            <ul>
+              <li>Old AI: classify, predict, score.</li>
+              <li>Generative AI: <em>create</em> - draft, design, compose, synthesise.</li>
+              <li>Same maths, very different product.</li>
+            </ul>
+          </div>
+          <div class="glass-card">
+            <h3>Why now</h3>
+            <ul>
+              <li>Cheap GPUs + massive web-scale data.</li>
+              <li>Transformer architecture (2017) unlocked long-range context.</li>
+              <li>RLHF + instruction tuning made it usable.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 6. DISCRIMINATIVE VS GENERATIVE -->
+    <section class="slide" data-title="Discriminative vs generative" data-duration="4">
+      <div class="slide-head">
+        <span class="kicker">Mental model</span>
+        <h2>Discriminative vs <span class="gradient-text">generative</span></h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid two">
+          <div class="glass-card">
+            <h3>Discriminative AI</h3>
+            <ul>
+              <li>Answers "is this X?"</li>
+              <li>Spam detector, fraud scorer, X-ray classifier.</li>
+              <li>Output: a label or a score.</li>
+              <li>Optimised for accuracy on a fixed task.</li>
+            </ul>
+            <p class="muted-2">Existed long before ChatGPT.</p>
+          </div>
+          <div class="glass-card">
+            <h3>Generative AI</h3>
+            <ul>
+              <li>Answers "give me a new X."</li>
+              <li>Writes the email, paints the cover, codes the function, narrates the video.</li>
+              <li>Output: an artefact - usually open-ended.</li>
+              <li>Optimised for plausibility &amp; usefulness.</li>
+            </ul>
+            <p class="muted-2">This is what we are unpacking today.</p>
+          </div>
+        </div>
+        <div class="tip-strip">
+          <strong>RULE</strong>
+          <span>If the output is a <em>new thing</em> rather than a <em>label</em>, you are talking to a generative
+            model.</span>
+        </div>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 7. MODALITIES MAP -->
+    <section class="slide" data-title="Modalities" data-duration="3">
+      <div class="slide-head">
+        <span class="kicker">Intro to GenAI</span>
+        <h2>Generative AI is multi-modal</h2>
+      </div>
+      <div class="slide-body">
+        <div class="pillar-grid">
+          <div><strong>Text</strong><span>Writing, summarising, coding-as-text, agents.</span></div>
+          <div><strong>Image</strong><span>Concept art, product shots, design variants.</span></div>
+          <div><strong>Audio</strong><span>Voice cloning, music, podcasts, dubbing.</span></div>
+          <div><strong>Video</strong><span>Short clips, B-roll, talking heads, ads.</span></div>
+          <div><strong>Code</strong><span>Autocomplete, refactor, tests, full features.</span></div>
+          <div><strong>3D / motion</strong><span>Game assets, avatars, animation, simulation.</span></div>
+        </div>
+        <p class="muted">Frontier models are increasingly cross-modal: text in, image / audio / video out. Next, we
+          translate this into concrete tools you can use today.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 9. CHART: FOUNDATION MODELS PER YEAR -->
+    <section class="slide" data-title="Foundation models per year" data-duration="4">
+      <div class="slide-head">
+        <span class="kicker">Trend &middot; chart 1 of 5</span>
+        <h2>Notable foundation model releases per year</h2>
+      </div>
+      <div class="slide-body">
+        <div class="chart-card">
+          <canvas id="chart-models"
+            aria-label="Line chart of notable foundation model release counts per year, 2017 to 2024"></canvas>
+        </div>
+        <p class="chart-source">
+          Source: Stanford HAI <em>AI Index Report 2024</em> - notable model releases per year (2017-2024).
+          <a href="https://aiindex.stanford.edu/report/" target="_blank" rel="noopener">aiindex.stanford.edu/report</a>
+        </p>
+        <div class="grid two">
+          <div class="glass-card">
+            <h3>Read this chart correctly</h3>
+            <ul>
+              <li>It shows <strong>counts per year</strong>, not market share.</li>
+              <li>One point can include models from many companies.</li>
+              <li>Use tooltip for year-wise model examples.</li>
+            </ul>
+          </div>
+          <div class="glass-card">
+            <h3>Model - company examples</h3>
+            <ul>
+              <li>OpenAI - GPT series</li>
+              <li>Google - Gemini family</li>
+              <li>Anthropic - Claude family</li>
+              <li>Meta - Llama family</li>
+              <li>Mistral AI - Mistral / Mixtral</li>
+            </ul>
+          </div>
+        </div>
+        <p class="muted">The curve is steep and compounding. Most of the widely used families in products today were
+          released in the last ~36 months.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 10. NOTABLE MODELS SNAPSHOT -->
+    <section class="slide" data-title="Notable models" data-duration="3">
+      <div class="slide-head">
+        <span class="kicker">What GenAI can do now</span>
+        <h2>Demo-ready tools and model families</h2>
+      </div>
+      <div class="slide-body">
+        <div class="domain-grid">
+          <div class="domain">
+            <h3>Lovable</h3>
+            <p>Prompt-to-app builder for landing pages and SaaS MVPs.</p>
+          </div>
+          <div class="domain">
+            <h3>Bolt</h3>
+            <p>Prompt-to-code app generation with rapid deploy loops.</p>
+          </div>
+          <div class="domain">
+            <h3>Kimi Slides</h3>
+            <p>Generate full slide narratives from a short brief.</p>
+          </div>
+          <div class="domain">
+            <h3>Gemini video tools</h3>
+            <p>Text-to-video clips, shot ideation, and narration variants.</p>
+          </div>
+          <div class="domain">
+            <h3>Nano Banana Pro</h3>
+            <p>Image generation for campaign, concept, and product visuals.</p>
+          </div>
+          <div class="domain">
+            <h3>General copilots</h3>
+            <p>ChatGPT, Claude, Gemini for writing, coding, and analysis.</p>
+          </div>
+          <div class="domain">
+            <h3>Open model layer</h3>
+            <p>Llama, Mistral, Flux for customizable stack choices.</p>
+          </div>
+          <div class="domain">
+            <h3>Automation layer</h3>
+            <p>n8n / Zapier to operationalize outputs as workflows.</p>
+          </div>
+        </div>
+        <p class="muted">You do not need to memorize every brand. You need to map each tool to a repeatable business
+          outcome.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 11. DOMAINS MAP -->
+    <section class="slide" data-title="Domains map" data-duration="3">
+      <div class="slide-head">
+        <span class="kicker">Where it lives now</span>
+        <h2>Eight domains generative AI has penetrated</h2>
+      </div>
+      <div class="slide-body">
+        <div class="domain-grid">
+          <div class="domain">
+            <h3>Healthcare</h3>
+            <p>Clinical note drafting, radiology triage, patient comms.</p>
+          </div>
+          <div class="domain">
+            <h3>Finance</h3>
+            <p>Research synthesis, KYC summaries, risk narratives.</p>
+          </div>
+          <div class="domain">
+            <h3>Education</h3>
+            <p>Tutors, lesson plans, feedback, exam prep.</p>
+          </div>
+          <div class="domain">
+            <h3>Marketing</h3>
+            <p>Briefs, copy variants, image / video assets, campaigns.</p>
+          </div>
+          <div class="domain">
+            <h3>Software</h3>
+            <p>Code generation, refactors, tests, dev assistants.</p>
+          </div>
+          <div class="domain">
+            <h3>Creative</h3>
+            <p>Storyboards, concept art, music, indie film.</p>
+          </div>
+          <div class="domain">
+            <h3>Legal</h3>
+            <p>Contract review, redlines, case-law summarisation.</p>
+          </div>
+          <div class="domain">
+            <h3>Customer support</h3>
+            <p>Tier-1 deflection, agent assist, multilingual replies.</p>
+          </div>
+        </div>
+        <p class="muted">The pattern: anywhere unstructured language, images, or code is the bottleneck, generative AI
+          shows up first.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 12. CHART: GENERATIVE AI INVESTMENT -->
+    <section class="slide" data-title="Investment trend" data-duration="4">
+      <div class="slide-head">
+        <span class="kicker">Trend &middot; chart 2 of 5</span>
+        <h2>Global private investment in generative AI</h2>
+      </div>
+      <div class="slide-body">
+        <div class="chart-card">
+          <canvas id="chart-investment"
+            aria-label="Bar chart of global private investment into generative AI, USD billions, 2019 to 2023"></canvas>
+        </div>
+        <p class="chart-source">
+          Source: Stanford HAI <em>AI Index Report 2024</em> - chapter 4, generative-AI funding (USD billions).
+          <a href="https://aiindex.stanford.edu/report/" target="_blank" rel="noopener">aiindex.stanford.edu/report</a>
+        </p>
+        <p class="muted">2023 was a step change. Capital is flowing toward the picks and shovels (models, infra, tools)
+          and the apps on top.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 13. CHART: ADOPTION BY FUNCTION -->
+    <section class="slide" data-title="Adoption by function" data-duration="4">
+      <div class="slide-head">
+        <span class="kicker">Trend &middot; chart 3 of 5</span>
+        <h2>AI adoption by business function</h2>
+      </div>
+      <div class="slide-body">
+        <div class="chart-card">
+          <canvas id="chart-adoption"
+            aria-label="Horizontal bar chart of AI adoption by business function, percent of organisations using AI in at least one activity in that function"></canvas>
+        </div>
+        <p class="chart-source">
+          Source: McKinsey <em>The state of AI 2024</em> - share of organisations regularly using AI in at least one
+          function.
+          <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank"
+            rel="noopener">mckinsey.com - state of AI</a>
+        </p>
+        <p class="muted">Marketing &amp; sales lead, but software engineering and knowledge management are the fastest
+          movers year-on-year.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 14. WORKED EXAMPLES 1 -->
+    <section class="slide" data-title="Worked examples (1/2)" data-duration="2">
+      <div class="slide-head">
+        <span class="kicker">From hype to wins</span>
+        <h2>Concrete wins - Healthcare, Finance, Education</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid three">
+          <div class="glass-card">
+            <h3>Healthcare</h3>
+            <p class="muted">Ambient clinical scribes draft visit notes from doctor-patient conversations - clinicians
+              report 30-60 minutes saved per day on charting.</p>
+          </div>
+          <div class="glass-card">
+            <h3>Finance</h3>
+            <p class="muted">Analysts use LLMs to summarise 100-page filings into a one-page brief with cited line
+              items, freeing time for actual judgement.</p>
+          </div>
+          <div class="glass-card">
+            <h3>Education</h3>
+            <p class="muted">Personalised tutors give every student a patient explainer at their level, in their
+              language - 24/7 office hours.</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 15. WORKED EXAMPLES 2 -->
+    <section class="slide" data-title="Worked examples (2/2)" data-duration="2">
+      <div class="slide-head">
+        <span class="kicker">From hype to reproducible demos</span>
+        <h2>Concrete wins + prompt recipes to try live</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid three">
+          <div class="glass-card">
+            <h3>Slide generation (Kimi Slides)</h3>
+            <p class="muted"><strong>Prompt:</strong> "Create a 10-slide executive deck on [topic] for [audience]. Keep
+              tone practical, include one case study and one action slide."</p>
+          </div>
+          <div class="glass-card">
+            <h3>App prototype (Lovable/Bolt)</h3>
+            <p class="muted"><strong>Prompt:</strong> "Build a responsive [app type] with [3 core features], clean UI,
+              and mock data. Add deployment steps."</p>
+          </div>
+          <div class="glass-card">
+            <h3>Image/video generation</h3>
+            <p class="muted"><strong>Prompt:</strong> "Generate a [style] hero image and 15-second promo video for
+              [product], with [mood], [camera angle], and [brand colors]."</p>
+          </div>
+        </div>
+        <div class="tip-strip">
+          <strong>EXERCISE</strong>
+          <span>Run one prompt per team, then iterate once by adding audience, constraints, and output format. Compare
+            first draft vs improved draft.</span>
+        </div>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 16. ACTIVITY A -->
+    <section class="slide" data-title="Activity A: Prompt lab" data-duration="7">
+      <div class="slide-head">
+        <span class="kicker">Hands-on - team activity</span>
+        <h2>Activity A - Build your prompt lab</h2>
+      </div>
+      <div class="slide-body">
+        <div class="challenge-box">
+          <p><strong>In teams of 3-4:</strong> pick one real task from your week and one tool from the previous slide.
+          </p>
+          <p class="muted-2">Goal: write, run, and refine a prompt that produces a reusable output your team can use
+            tomorrow.</p>
+        </div>
+        <div class="grid two">
+          <div class="glass-card">
+            <h3>Prompt template</h3>
+            <ul>
+              <li>Role: "You are a [role] helping with [task]."</li>
+              <li>Context: include audience, constraints, and source material.</li>
+              <li>Output: request a strict format (table, bullets, JSON, storyboard).</li>
+            </ul>
+          </div>
+          <div class="glass-card">
+            <h3>Output</h3>
+            <ul>
+              <li>Version 1 prompt and output</li>
+              <li>Version 2 improved prompt and output</li>
+              <li>One learning your team can generalize</li>
+            </ul>
+          </div>
+        </div>
+        <aside class="notes">
+          Walk between teams. Push them to make the prompt specific and measurable. Reserve 90 seconds for one team to
+          share before and after outputs.
+        </aside>
+      </div>
+      <div class="slide-foot">
+        <div class="timer-badge"><span class="dot"></span> 6-minute timer</div>
+      </div>
+    </section>
+
+    <!-- 17. HOW IT WORKS - INTUITIVE -->
+    <section class="slide" data-title="How it works" data-duration="5">
+      <div class="slide-head">
+        <span class="kicker">How it is built</span>
+        <h2>From translation research to modern LLMs</h2>
+      </div>
+      <div class="slide-body">
+        <div class="callout">
+          <h3>History in one minute</h3>
+          <p>In 2017, the paper <em>Attention Is All You Need</em> introduced the Transformer architecture for neural
+            machine translation. Instead of processing words strictly one-by-one, attention let models weigh all words
+            in context, making training faster and quality better. That translation breakthrough became the backbone of
+            today's LLMs.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <span class="num">STEP 1</span>
+            <span class="step-title">Tokens</span>
+            <span class="step-desc">Your text is split into sub-word units the model can score.</span>
+          </div>
+          <div class="step">
+            <span class="num">STEP 2</span>
+            <span class="step-title">Embeddings</span>
+            <span class="step-desc">Each token becomes a position in a high-dimensional meaning space.</span>
+          </div>
+          <div class="step">
+            <span class="num">STEP 3</span>
+            <span class="step-title">Prediction</span>
+            <span class="step-desc">The model predicts the next token repeatedly; attention determines which earlier
+              tokens matter most.</span>
+          </div>
+          <div class="step">
+            <span class="num">STEP 4</span>
+            <span class="step-title">Training data</span>
+            <span class="step-desc">Scale training on books, code, articles, transcripts, and the web creates broad
+              pattern fluency.</span>
+          </div>
+        </div>
+        <div class="grid two">
+          <div class="glass-card">
+            <h3>What this gives us</h3>
+            <ul>
+              <li>Fluent writing across many domains.</li>
+              <li>Pattern transfer: it can imitate styles it has seen.</li>
+              <li>Compression of human knowledge into one interface.</li>
+              <li>Generalisation: translation-era ideas now power chat, coding, image, and video models.</li>
+            </ul>
+          </div>
+          <div class="glass-card">
+            <h3>What this does NOT give us</h3>
+            <ul>
+              <li>Truth - it predicts plausible, not factual.</li>
+              <li>Memory - no recall between sessions unless you provide it.</li>
+              <li>Judgement, ethics, accountability.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 18. BREAK -->
+    <section class="slide break-slide" data-title="Break" data-duration="10">
+      <div class="slide-head"></div>
+      <div class="slide-body" style="justify-content:center; align-items:center; text-align:center;">
+        <span class="kicker">Take a breather</span>
+        <div class="break-clock">10:00</div>
+        <p class="lead center">Stretch, hydrate, talk to a stranger. We come back sharper.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 18. CHART: TASK EXPOSURE -->
+    <section class="slide" data-title="Task exposure" data-duration="3">
+      <div class="slide-head">
+        <span class="kicker">Trend &middot; chart 4 of 5</span>
+        <h2>Task exposure to LLMs by occupation</h2>
+      </div>
+      <div class="slide-body">
+        <div class="chart-card">
+          <canvas id="chart-exposure"
+            aria-label="Horizontal bar chart of percent of work tasks exposed to large language models, by selected occupation"></canvas>
+        </div>
+        <p class="chart-source">
+          Source: Eloundou, Manning, Mishkin, Rock - <em>"GPTs are GPTs: An Early Look at the Labor Market Impact
+            Potential of LLMs"</em>, OpenAI 2023.
+          <a href="https://arxiv.org/abs/2303.10130" target="_blank" rel="noopener">arxiv.org/abs/2303.10130</a>
+        </p>
+        <p class="muted">"Exposed" means LLMs can plausibly cut time-on-task by &gt;=50%. Note: knowledge work
+          dominates; physical work is far less exposed.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 19. NEW ROLES -->
+    <section class="slide" data-title="New roles" data-duration="2">
+      <div class="slide-head">
+        <span class="kicker">The job map is shifting</span>
+        <h2>New roles emerging</h2>
+      </div>
+      <div class="slide-body">
+        <div class="domain-grid">
+          <div class="domain">
+            <h3>Prompt designer</h3>
+            <p>Builds the team's prompt library and patterns.</p>
+          </div>
+          <div class="domain">
+            <h3>AI editor</h3>
+            <p>Reviews and tightens machine-drafted output for tone &amp; truth.</p>
+          </div>
+          <div class="domain">
+            <h3>AI evals lead</h3>
+            <p>Designs tests and benchmarks for AI features in production.</p>
+          </div>
+          <div class="domain">
+            <h3>AI safety / ethics</h3>
+            <p>Defines guardrails, red-teams, monitors for harm.</p>
+          </div>
+          <div class="domain">
+            <h3>AI integrator</h3>
+            <p>Wires LLMs into existing tools, data, and workflows.</p>
+          </div>
+          <div class="domain">
+            <h3>Domain + AI hybrids</h3>
+            <p>Lawyer + AI, doctor + AI, teacher + AI - the most defensible role of all.</p>
+          </div>
+        </div>
+        <p class="muted">Most of these titles did not exist three years ago. None of them require a PhD.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 20. PRODUCTIVITY EQUATION -->
+    <section class="slide" data-title="The new productivity equation" data-duration="2">
+      <div class="slide-head">
+        <span class="kicker">Mental model</span>
+        <h2>The new productivity equation</h2>
+      </div>
+      <div class="slide-body">
+        <div class="quote-block">
+          Output = Human judgement &times; AI leverage
+          <div class="quote-author">- The shape of knowledge work, 2025+</div>
+        </div>
+        <ul>
+          <li><strong>Human judgement</strong> is taste, ethics, prioritisation, customer empathy. AI cannot supply
+            these.</li>
+          <li><strong>AI leverage</strong> is throughput, draft volume, language coverage, idea variety. AI is
+            unbeatable here.</li>
+          <li><strong>Multiplication, not addition.</strong> Either factor at zero gives zero - you need both.</li>
+        </ul>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 21. WHAT WILL NOT CHANGE -->
+    <section class="slide" data-title="What will NOT change" data-duration="2">
+      <div class="slide-head">
+        <span class="kicker">Anchor</span>
+        <h2>What will <span class="gradient-text">not</span> change</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid two">
+          <div class="glass-card">
+            <h3>Always human</h3>
+            <ul>
+              <li>Taste and aesthetic judgement</li>
+              <li>Ethics, accountability, the apology when it fails</li>
+              <li>Customer empathy and trust</li>
+              <li>Choosing the <em>right</em> problem to solve</li>
+            </ul>
+          </div>
+          <div class="callout">
+            <h3>Therefore</h3>
+            <p>Lean into the human side. The more AI commoditises drafts, the more taste and judgement compound in
+              value.</p>
+          </div>
+        </div>
+        <p class="muted">"AI will not replace you. A person using AI well, who also has good taste, will." - the new
+          working line.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 22. ACTIVITY B -->
+    <section class="slide" data-title="Activity B: Job remix" data-duration="9">
+      <div class="slide-head">
+        <span class="kicker">Hands-on - team activity</span>
+        <h2>Activity B - Remix your job</h2>
+      </div>
+      <div class="slide-body">
+        <div class="challenge-box">
+          <p>List 8-10 tasks you do in a typical week. Sort each into one of three buckets:</p>
+          <ul>
+            <li><strong>AUGMENT</strong> - AI helps you do this faster / better</li>
+            <li><strong>REPLACE</strong> - AI can fully take this over with light review</li>
+            <li><strong>HUMAN ONLY</strong> - judgement, trust, or accountability requires you</li>
+          </ul>
+        </div>
+        <div class="callout">
+          <p>Then ask: if AI absorbed the AUGMENT and REPLACE columns, what would you spend your week on instead?
+            <em>That</em> is your future job.</p>
+        </div>
+        <aside class="notes">
+          Encourage candour. The exercise hurts a little - that is the signal it is working.
+        </aside>
+      </div>
+      <div class="slide-foot">
+        <div class="timer-badge"><span class="dot"></span> 8-minute timer</div>
+      </div>
+    </section>
+
+    <!-- 23. THE 6 FACETS - INTRO -->
+    <section class="slide" data-title="The 6 facets" data-duration="2">
+      <div class="slide-head">
+        <span class="kicker">Level up</span>
+        <h2>The 6 facets of an AI-fluent person</h2>
+      </div>
+      <div class="slide-body">
+        <div class="facet-grid">
+          <div class="facet"><span class="num">FACET 1</span>
+            <h3>Prompting &amp; evaluation</h3>
+            <p>Can you steer a model and judge its output?</p>
+          </div>
+          <div class="facet"><span class="num">FACET 2</span>
+            <h3>Toolchain fluency</h3>
+            <p>Cursor, Claude, ChatGPT, Gemini, vector DBs, n8n.</p>
+          </div>
+          <div class="facet"><span class="num">FACET 3</span>
+            <h3>Domain mastery</h3>
+            <p>AI without domain is shallow. Stay deep in one thing.</p>
+          </div>
+          <div class="facet"><span class="num">FACET 4</span>
+            <h3>Critical thinking + ethics</h3>
+            <p>Spot hallucinations, bias, IP, privacy concerns.</p>
+          </div>
+          <div class="facet"><span class="num">FACET 5</span>
+            <h3>Building with AI</h3>
+            <p>Ship a real thing - chatbot, classifier, agent.</p>
+          </div>
+          <div class="facet"><span class="num">FACET 6</span>
+            <h3>Communication &amp; collaboration</h3>
+            <p>Explain it to non-AI peers. Bring your team along.</p>
+          </div>
+        </div>
+        <p class="muted">Five we will go deep on next. The sixth - communication - we are practising right now.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 24. FACET 1: PROMPTING & EVALUATION -->
+    <section class="slide" data-title="Facet 1: Prompting & evaluation" data-duration="3">
+      <div class="slide-head">
+        <span class="kicker">Facet 1 of 5</span>
+        <h2>Prompting and evaluation</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid two">
+          <div class="glass-card">
+            <h3>What to learn</h3>
+            <ul>
+              <li>The 6-pillar framework: Goal &rarr; Context &rarr; Constraints &rarr; Output &rarr; Quality &rarr;
+                Iterate.</li>
+              <li>Few-shot, chain-of-thought, role priming, structured outputs, prompt chaining.</li>
+              <li>How to evaluate output: rubric scoring, A/B prompts, regression tests.</li>
+            </ul>
+          </div>
+          <div class="glass-card">
+            <h3>How to start</h3>
+            <ul>
+              <li>Run the companion <strong>Prompt Engineering Fundamentals</strong> deck (it ships with this one).</li>
+              <li>Save your 5 best prompts in a shared doc this week.</li>
+              <li>Score every AI output on accuracy + usefulness for 7 days.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="muted">Prompting is not magic. It is <em>specification under uncertainty</em> - and you can practise
+          it.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 25. FACET 2: TOOLCHAIN -->
+    <section class="slide" data-title="Facet 2: Toolchain" data-duration="3">
+      <div class="slide-head">
+        <span class="kicker">Facet 2 of 5</span>
+        <h2>Toolchain fluency</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid three">
+          <div class="glass-card">
+            <h3>Daily drivers</h3>
+            <ul>
+              <li>ChatGPT, Claude, Gemini - know the strengths of each.</li>
+              <li>Cursor - AI-first IDE for coding work.</li>
+              <li>Perplexity / Phind for research.</li>
+            </ul>
+          </div>
+          <div class="glass-card">
+            <h3>Builder layer</h3>
+            <ul>
+              <li>Notebooks (Jupyter, Colab) for experiments.</li>
+              <li>Vector DBs (Pinecone, Weaviate) for retrieval.</li>
+              <li>LangChain / LlamaIndex / Pydantic-AI for chaining.</li>
+            </ul>
+          </div>
+          <div class="glass-card">
+            <h3>Automation layer</h3>
+            <ul>
+              <li>n8n / Make / Zapier for AI workflows.</li>
+              <li>Cron jobs + APIs for the ones that matter.</li>
+              <li>GitHub Actions for code-shaped automation.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tip-strip">
+          <strong>HABIT</strong>
+          <span>Pick one tool from each row. Use it for 14 days before adding another.</span>
+        </div>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 26. FACET 3: DOMAIN MASTERY -->
+    <section class="slide" data-title="Facet 3: Domain mastery" data-duration="3">
+      <div class="slide-head">
+        <span class="kicker">Facet 3 of 5</span>
+        <h2>Domain mastery</h2>
+      </div>
+      <div class="slide-body">
+        <div class="quote-block">
+          AI without domain is shallow. AI plus a deep domain is unfair leverage.
+          <div class="quote-author">- The single most under-appreciated career insight of this era</div>
+        </div>
+        <div class="grid two">
+          <div class="glass-card">
+            <h3>Why it matters</h3>
+            <ul>
+              <li>The model knows the average. <em>You</em> know the edge cases.</li>
+              <li>You can tell when it is confidently wrong - others cannot.</li>
+              <li>Customers buy expertise from a human, served via AI.</li>
+            </ul>
+          </div>
+          <div class="glass-card">
+            <h3>How to invest</h3>
+            <ul>
+              <li>Pick one domain you can credibly own in 5 years.</li>
+              <li>Read original sources, not summaries. AI does the summary; <em>you</em> read the source.</li>
+              <li>Keep a "things AI got wrong about my field" doc. It is gold.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 27. FACET 4: CRITICAL THINKING + ETHICS -->
+    <section class="slide" data-title="Facet 4: Critical thinking + ethics" data-duration="3">
+      <div class="slide-head">
+        <span class="kicker">Facet 4 of 5</span>
+        <h2>Critical thinking and ethics</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid two">
+          <div class="glass-card">
+            <h3>Pitfalls to spot</h3>
+            <ul>
+              <li><strong>Hallucinations</strong> - confident, fluent, wrong.</li>
+              <li><strong>Bias</strong> - models inherit it from training data.</li>
+              <li><strong>Privacy / PII</strong> - what you paste may be logged.</li>
+              <li><strong>IP &amp; copyright</strong> - generated assets are murky territory.</li>
+              <li><strong>Over-reliance</strong> - skill atrophy when you skip the thinking.</li>
+            </ul>
+          </div>
+          <div class="callout warning">
+            <h3>Working rules</h3>
+            <p>Never paste secrets. Verify any fact you would put your name on. Be honest about AI involvement when it
+              matters - to clients, to readers, to your team.</p>
+          </div>
+        </div>
+        <div class="tip-strip">
+          <strong>NORTH STAR</strong>
+          <span>You stay accountable for the output, no matter how it was produced.</span>
+        </div>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 28. FACET 5: BUILDING WITH AI -->
+    <section class="slide" data-title="Facet 5: Building with AI" data-duration="3">
+      <div class="slide-head">
+        <span class="kicker">Facet 5 of 5</span>
+        <h2>Build with AI - 5 starter projects</h2>
+      </div>
+      <div class="slide-body">
+        <div class="domain-grid">
+          <div class="domain">
+            <h3>1. Personal chatbot</h3>
+            <p>Wrap an LLM API in a tiny UI. Start here - it teaches the loop.</p>
+          </div>
+          <div class="domain">
+            <h3>2. Summariser</h3>
+            <p>Turn YouTube / PDFs / meetings into 5-bullet briefs.</p>
+          </div>
+          <div class="domain">
+            <h3>3. Classifier</h3>
+            <p>Tag emails, support tickets, or feedback with categories.</p>
+          </div>
+          <div class="domain">
+            <h3>4. RAG retriever</h3>
+            <p>Ask questions over your own notes / docs. Vector DB + LLM.</p>
+          </div>
+          <div class="domain">
+            <h3>5. Mini agent</h3>
+            <p>A loop that reads, decides, acts - even if it is one step.</p>
+          </div>
+          <div class="domain">
+            <h3>6. (Bonus) Workflow</h3>
+            <p>Automate one weekly task end-to-end with n8n / Zapier + LLM.</p>
+          </div>
+        </div>
+        <p class="muted">You learn 10x more by building one of these than by reading ten more articles.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 29. ACTIVITY C - 30/60/90 PLAN -->
+    <section class="slide" data-title="Activity C: 30/60/90 plan" data-duration="8">
+      <div class="slide-head">
+        <span class="kicker">Hands-on - team activity</span>
+        <h2>Activity C - Your 30/60/90 AI learning plan</h2>
+      </div>
+      <div class="slide-body">
+        <div class="challenge-box">
+          <p>Build a personal plan in 3 horizons. One bullet each, concrete enough to start tomorrow.</p>
+        </div>
+        <div class="grid three">
+          <div class="glass-card">
+            <h3>30 days</h3>
+            <ul>
+              <li>The 1 daily-driver tool you commit to</li>
+              <li>The 1 prompting technique you will master</li>
+              <li>5 prompts saved in your team library</li>
+            </ul>
+          </div>
+          <div class="glass-card">
+            <h3>60 days</h3>
+            <ul>
+              <li>The 1 starter project you will ship</li>
+              <li>The 1 domain depth you double down on</li>
+              <li>1 teammate you bring along (Facet 6)</li>
+            </ul>
+          </div>
+          <div class="glass-card">
+            <h3>90 days</h3>
+            <ul>
+              <li>1 workflow automated end-to-end</li>
+              <li>1 piece of writing / talk on what you learned</li>
+              <li>The next 90-day goal already defined</li>
+            </ul>
+          </div>
+        </div>
+        <aside class="notes">
+          Reserve 90 seconds for one volunteer to share their plan. Specific beats ambitious.
+        </aside>
+      </div>
+      <div class="slide-foot">
+        <div class="timer-badge"><span class="dot"></span> 7-minute timer</div>
+      </div>
+    </section>
+
+    <!-- 30. CHART: CHATGPT ADOPTION CURVE -->
+    <section class="slide" data-title="ChatGPT adoption curve" data-duration="3">
+      <div class="slide-head">
+        <span class="kicker">Trend &middot; chart 5 of 5</span>
+        <h2>The ChatGPT adoption curve</h2>
+      </div>
+      <div class="slide-body">
+        <div class="chart-card">
+          <canvas id="chart-chatgpt"
+            aria-label="Line chart of ChatGPT active users in millions over time, from launch in late 2022 to 2024"></canvas>
+        </div>
+        <p class="chart-source">
+          Sources: OpenAI announcements (Nov 2022 launch, Jan 2023 100M MAU, 2024 200M+ WAU), <em>Reuters</em> &amp;
+          <em>Statista</em> milestone timeline.
+          <a href="https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/"
+            target="_blank" rel="noopener">reuters.com</a> &middot;
+          <a href="https://www.statista.com/statistics/1366930/chatgpt-website-monthly-visits/" target="_blank"
+            rel="noopener">statista.com</a>
+        </p>
+        <p class="muted">The fastest mass-market adoption of any consumer software in history. Every product team is now
+          planning against this curve.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 31. SOURCES & FURTHER READING -->
+    <section class="slide" data-title="Sources &amp; further reading" data-duration="3">
+      <div class="slide-head">
+        <span class="kicker">Go deeper</span>
+        <h2>Sources and further reading</h2>
+      </div>
+      <div class="slide-body">
+        <div class="resource-list">
+          <a class="resource-card" href="https://aiindex.stanford.edu/report/" target="_blank" rel="noopener">
+            <span class="resource-host">aiindex.stanford.edu</span>
+            <span class="resource-title">Stanford HAI - AI Index Report</span>
+            <span class="resource-desc">The annual reference for AI trends, models, and investment.</span>
+          </a>
+          <a class="resource-card"
+            href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank"
+            rel="noopener">
+            <span class="resource-host">mckinsey.com</span>
+            <span class="resource-title">McKinsey - The State of AI</span>
+            <span class="resource-desc">Adoption survey across functions and industries.</span>
+          </a>
+          <a class="resource-card" href="https://www.weforum.org/publications/the-future-of-jobs-report-2023/"
+            target="_blank" rel="noopener">
+            <span class="resource-host">weforum.org</span>
+            <span class="resource-title">WEF - Future of Jobs Report</span>
+            <span class="resource-desc">How employers expect AI to reshape work over 5 years.</span>
+          </a>
+          <a class="resource-card" href="https://ourworldindata.org/artificial-intelligence" target="_blank"
+            rel="noopener">
+            <span class="resource-host">ourworldindata.org</span>
+            <span class="resource-title">Our World in Data - AI</span>
+            <span class="resource-desc">Beautifully sourced long-run AI data &amp; charts.</span>
+          </a>
+          <a class="resource-card" href="https://www.youtube.com/watch?v=zjkBMFhNj_g" target="_blank" rel="noopener">
+            <span class="resource-host">youtube.com</span>
+            <span class="resource-title">Karpathy - Intro to LLMs</span>
+            <span class="resource-desc">Best 1-hour mental model for how LLMs actually work.</span>
+          </a>
+          <a class="resource-card" href="https://arxiv.org/abs/2303.10130" target="_blank" rel="noopener">
+            <span class="resource-host">arxiv.org</span>
+            <span class="resource-title">"GPTs are GPTs" - Eloundou et al.</span>
+            <span class="resource-desc">Original task-exposure paper used in slide 18.</span>
+          </a>
+          <a class="resource-card"
+            href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank"
+            rel="noopener">
+            <span class="resource-host">docs.anthropic.com</span>
+            <span class="resource-title">Anthropic - Prompt Engineering</span>
+            <span class="resource-desc">Hands-on prompting docs from the Claude team.</span>
+          </a>
+          <a class="resource-card" href="https://a16z.com/ai/" target="_blank" rel="noopener">
+            <span class="resource-host">a16z.com</span>
+            <span class="resource-title">a16z - AI &amp; Generative AI reports</span>
+            <span class="resource-desc">Industry-wide essays on where AI is going next.</span>
+          </a>
+        </div>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 32. TOMORROW'S ACTION PLAN -->
+    <section class="slide" data-title="Tomorrow's plan" data-duration="2">
+      <div class="slide-head">
+        <span class="kicker">Action plan</span>
+        <h2>Three things to do tomorrow</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid three">
+          <div class="glass-card">
+            <h3>1. Try</h3>
+            <p class="muted">Pick a single weekly task and run it through your daily-driver model with the 6-pillar
+              prompt framework.</p>
+          </div>
+          <div class="glass-card">
+            <h3>2. Save</h3>
+            <p class="muted">Drop your 5 best prompts and your 30/60/90 plan into a shared team doc - and pin it.</p>
+          </div>
+          <div class="glass-card">
+            <h3>3. Ship</h3>
+            <p class="muted">Commit publicly to one starter project (chatbot, summariser, classifier, retriever, agent)
+              in the next 30 days.</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 33. CONNECT WITH ME -->
+    <section class="slide" data-title="Connect with me" data-duration="2">
+      <div class="slide-head">
+        <span class="kicker">Stay in touch</span>
+        <h2>Let's keep the conversation going</h2>
+        <p class="lead">Reach out for slides, follow-ups, or to share what you build.</p>
+      </div>
+      <div class="slide-body">
+        <div class="social-grid">
+          <a class="social-card" href="https://www.linkedin.com/in/pravesh-chapagain-62b6b66a/" target="_blank" rel="noopener">
+            <span class="social-icon">in</span>
+            <span class="social-platform">LinkedIn</span>
+            <span class="social-handle">/in/pravesh-chapagain-62b6b66a/</span>
+          </a>
+          <a class="social-card" href="https://github.com/spravesh1818" target="_blank" rel="noopener">
+            <span class="social-icon">GH</span>
+            <span class="social-platform">GitHub</span>
+            <span class="social-handle">@spravesh1818</span>
+          </a>
+          <a class="social-card" href="mailto:spravesh1818@gmail.com">
+            <span class="social-icon">@</span>
+            <span class="social-platform">Email</span>
+            <span class="social-handle">spravesh1818@gmail.com</span>
+          </a>
+        </div>
+        <p class="muted center mt-3">Slides + 30/60/90 template available on request.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+
+    <!-- 34. Q & A -->
+    <section class="slide layout-hero" data-title="Q and A" data-duration="3">
+      <div class="slide-head">
+        <span class="kicker">Open floor</span>
+        <h1>Questions?</h1>
+        <p class="lead">Generative AI is leverage. Pair it with your taste, your domain, and your judgement - and go
+          build.</p>
+      </div>
+      <div class="slide-body">
+        <p class="muted">Thank you. Now go ship something great.</p>
+      </div>
+      <div class="slide-foot"></div>
+    </section>
+  </main>
+
+  <!-- Overview grid (populated by deck.js) -->
+  <div id="overviewGrid" class="overview-grid" aria-hidden="true"></div>
+
+  <footer class="deck-controls">
+    <button id="prevBtn" class="btn" aria-label="Previous slide">&larr; Back</button>
+    <div class="progress-wrap">
+      <span id="slideLabel">Slide 1</span>
+      <div class="progress-bar" aria-hidden="true">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+    </div>
+    <button id="nextBtn" class="btn primary" aria-label="Next slide">Next &rarr;</button>
+    <button id="overviewBtn" class="btn ghost" aria-pressed="false" title="Overview (O)">Overview</button>
+    <button id="notesBtn" class="btn ghost" aria-pressed="false" title="Toggle notes (N)">Notes</button>
+    <button id="fullscreenBtn" class="btn ghost" title="Fullscreen (F)">Full</button>
+  </footer>
+
+  <script src="./scripts/deck.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="./scripts/charts.js"></script>
+</body>
+
+</html>

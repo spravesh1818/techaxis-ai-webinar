@@ -1,0 +1,381 @@
+/* =====================================================================
+   THEME: Dark Glassmorphism, refined.
+   - Tokens-only file. Override :root variables to rebrand.
+   - No ambient blobs, no heavy backdrop-filter (kept render-stable).
+   ===================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+:root {
+  --bg-0: #070a1a;
+  --bg-1: #0d1230;
+  --bg-2: #131845;
+
+  --surface-1: rgba(255, 255, 255, 0.04);
+  --surface-2: rgba(255, 255, 255, 0.07);
+  --line-1: rgba(255, 255, 255, 0.10);
+  --line-2: rgba(255, 255, 255, 0.18);
+
+  --text: #eef1fb;
+  --text-strong: #ffffff;
+  --muted: #b0b9d8;
+  --muted-2: #818bb0;
+
+  --accent: #7c9cff;
+  --accent-2: #5eead4;
+  --accent-3: #c4b5fd;
+  --warn: #fbbf77;
+  --danger: #ff8a8a;
+
+  --gradient-accent: linear-gradient(135deg, #7c9cff 0%, #c4b5fd 50%, #5eead4 100%);
+  --gradient-soft: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --space-1: 0.4rem;
+  --space-2: 0.7rem;
+  --space-3: 1rem;
+  --space-4: 1.4rem;
+  --space-5: 1.9rem;
+
+  --font-display: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --shadow-soft: 0 10px 22px -10px rgba(0, 0, 0, 0.45);
+  --shadow-strong: 0 22px 48px -22px rgba(0, 0, 0, 0.6);
+
+  --controls-h: 76px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1vw, 1.05rem);
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--bg-0);
+  background-image:
+    radial-gradient(1100px 600px at 80% -10%, rgba(124, 156, 255, 0.18), transparent 60%),
+    radial-gradient(900px 500px at -10% 100%, rgba(94, 234, 212, 0.14), transparent 65%),
+    linear-gradient(180deg, var(--bg-0), var(--bg-1) 60%, var(--bg-2));
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* ---------- Typography ---------- */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--text-strong);
+  margin: 0 0 var(--space-2);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+}
+
+h3 {
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+p, li {
+  font-size: clamp(0.95rem, 1.05vw, 1.05rem);
+  line-height: 1.55;
+  color: var(--text);
+}
+
+p {
+  margin: 0 0 var(--space-2);
+}
+
+.lead {
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  color: var(--muted);
+  max-width: 64ch;
+  font-weight: 400;
+  margin-bottom: var(--space-3);
+}
+
+.muted   { color: var(--muted); }
+.muted-2 { color: var(--muted-2); }
+.center  { text-align: center; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(124, 156, 255, 0.45);
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+a:hover {
+  color: var(--accent-2);
+  border-bottom-color: var(--accent-2);
+}
+
+code, pre, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}
+
+pre {
+  margin: 0;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  background: rgba(7, 10, 26, 0.7);
+  border: 1px solid var(--line-1);
+  overflow: auto;
+  color: #e7ebff;
+  line-height: 1.45;
+  font-size: clamp(0.78rem, 0.95vw, 0.92rem);
+}
+
+/* ---------- Glass surfaces (flat, render-stable) ---------- */
+
+.glass-card,
+.callout,
+.challenge-box,
+.demo-box,
+.profile-card,
+.resource-card,
+.stat-card,
+.tile {
+  background: var(--surface-1);
+  border: 1px solid var(--line-1);
+  border-radius: var(--radius-lg);
+  padding: clamp(0.85rem, 1.6vw, 1.25rem);
+  box-shadow: var(--shadow-soft);
+}
+
+.callout         { border-left: 3px solid var(--accent); }
+.callout.warning { border-left-color: var(--warn); }
+.callout.success { border-left-color: var(--accent-2); }
+
+.challenge-box {
+  border: 1px solid rgba(94, 234, 212, 0.35);
+  background: rgba(94, 234, 212, 0.08);
+}
+
+.demo-box { border-left: 3px solid var(--accent-3); }
+
+/* ---------- Atoms ---------- */
+
+.kicker {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: var(--space-1);
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--line-1);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+
+.tag.accent {
+  background: rgba(124, 156, 255, 0.15);
+  border-color: rgba(124, 156, 255, 0.4);
+  color: #dde6ff;
+}
+
+.tag.success {
+  background: rgba(94, 234, 212, 0.15);
+  border-color: rgba(94, 234, 212, 0.4);
+  color: #c8fff1;
+}
+
+.tag.warn {
+  background: rgba(251, 191, 119, 0.15);
+  border-color: rgba(251, 191, 119, 0.4);
+  color: #ffe8c9;
+}
+
+.gradient-text {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-2), transparent);
+  margin: var(--space-3) 0;
+  border: 0;
+}
+
+/* ---------- Grid helpers ---------- */
+
+.grid {
+  display: grid;
+  gap: clamp(0.6rem, 1vw, 1rem);
+}
+
+.grid.two   { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid.four  { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+@media (max-width: 900px) {
+  .grid.two,
+  .grid.three,
+  .grid.four { grid-template-columns: 1fr; }
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.01em;
+  border: 1px solid var(--line-2);
+  background: var(--surface-1);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  transition: border-color 150ms ease, background 150ms ease, transform 120ms ease;
+}
+
+.btn:hover {
+  border-color: var(--accent);
+  background: rgba(124, 156, 255, 0.12);
+}
+
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn.primary {
+  background: var(--gradient-accent);
+  border-color: transparent;
+  color: #07091a;
+}
+
+.btn.primary:hover { filter: brightness(1.05); }
+.btn.ghost { background: transparent; }
+
+/* ---------- Pillar / rubric tiles ---------- */
+
+.pillar-grid,
+.rubric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.5rem, 1vw, 0.85rem);
+}
+
+.pillar-grid > div,
+.rubric-grid > div {
+  padding: clamp(0.7rem, 1.2vw, 1rem);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line-1);
+  background: var(--surface-1);
+}
+
+.pillar-grid strong,
+.rubric-grid strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-strong);
+}
+
+.pillar-grid span,
+.rubric-grid span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 900px) {
+  .pillar-grid,
+  .rubric-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .pillar-grid,
+  .rubric-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.93rem;
+    line-height: 1.48;
+  }
+
+  h1 {
+    font-size: clamp(1.55rem, 7vw, 2rem);
+    line-height: 1.08;
+  }
+
+  h2 {
+    font-size: clamp(1.25rem, 5.6vw, 1.7rem);
+    line-height: 1.15;
+  }
+
+  h3 {
+    font-size: clamp(0.95rem, 4.1vw, 1.05rem);
+  }
+
+  p,
+  li {
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+
+  .lead {
+    font-size: 1rem;
+    line-height: 1.42;
+    margin-bottom: 0.7rem;
+  }
+
+  pre {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    padding: 0.75rem;
+  }
+}

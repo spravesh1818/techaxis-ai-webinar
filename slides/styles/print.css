@@ -1,0 +1,140 @@
+/* =====================================================================
+   PRINT / HANDOUT STYLES
+   Loaded via media="print". Each slide becomes its own page.
+   ===================================================================== */
+
+@page {
+  size: A4 landscape;
+  margin: 14mm;
+}
+
+@media print {
+  html, body {
+    background: #ffffff !important;
+    color: #0a0d1f !important;
+  }
+
+  body::before,
+  body::after {
+    display: none !important;
+  }
+
+  /* Hide interactive chrome */
+  .deck-controls,
+  .overview-grid,
+  #overviewBtn,
+  #notesBtn,
+  #fullscreenBtn {
+    display: none !important;
+  }
+
+  .deck {
+    padding: 0 !important;
+    min-height: auto !important;
+    display: block !important;
+  }
+
+  .slide {
+    display: block !important;
+    page-break-after: always;
+    break-after: page;
+    max-width: none !important;
+    margin: 0 0 14mm 0 !important;
+    box-shadow: none !important;
+    animation: none !important;
+    color: #0a0d1f !important;
+  }
+
+  .slide:last-of-type {
+    page-break-after: auto;
+  }
+
+  h1, h2, h3, h4 {
+    color: #0a0d1f !important;
+  }
+
+  p, li, span, .lead, .muted, .muted-2 {
+    color: #1a1f3a !important;
+  }
+
+  .gradient-text,
+  .stat-number,
+  .break-clock,
+  .social-icon {
+    background: none !important;
+    -webkit-text-fill-color: #1f3a8a !important;
+    color: #1f3a8a !important;
+  }
+
+  .glass-card,
+  .callout,
+  .challenge-box,
+  .demo-box,
+  .profile-card,
+  .resource-card,
+  .stat-card,
+  .tile,
+  .agenda-item,
+  .overview-tile,
+  .social-card,
+  pre {
+    background: #ffffff !important;
+    border: 1px solid #cbd2e0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    color: #0a0d1f !important;
+  }
+
+  pre, code, .mono {
+    background: #f4f6fb !important;
+    color: #0a0d1f !important;
+  }
+
+  .video-frame {
+    border: 1px dashed #cbd2e0 !important;
+    background: #f4f6fb !important;
+  }
+
+  .video-frame::after {
+    content: "Embedded video (open the deck on screen to play)";
+    display: block;
+    padding: 1rem;
+    color: #475569;
+    font-style: italic;
+  }
+
+  .video-frame iframe {
+    display: none !important;
+  }
+
+  /* Show notes on print only when query string ?notes=1 was used.
+     Without JS we cannot detect that, so by default keep notes hidden. */
+  .notes {
+    display: none !important;
+  }
+
+  .show-notes .notes {
+    display: block !important;
+    border: 1px dashed #94a3b8 !important;
+    background: #f8fafc !important;
+    color: #1f2937 !important;
+  }
+
+  a {
+    color: #1d4ed8 !important;
+    border-bottom-color: #94a3b8 !important;
+  }
+
+  a[href]:not([href^="#"])::after {
+    content: " (" attr(href) ")";
+    font-size: 0.78em;
+    color: #475569;
+    word-break: break-all;
+  }
+
+  .gallery img {
+    max-height: 80mm;
+    object-fit: cover;
+  }
+}
